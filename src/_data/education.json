@@ -1,0 +1,34 @@
+[
+  {
+    "institution": "Toronto Metropolitan University",
+    "timeline": "2021-2025",
+    "major": "Computer Engineering",
+    "degree": "Ph.D.",
+    "location": "Toronto, ON, Canada",
+    "points": [
+      "Member of Trustworthy AI Research Lab (<a class=\"link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://www.ecb.torontomu.ca/~samavi/research.html\" target=\"_blank\" rel=\"nofollow\">TAILab</a>)",
+      "Dissertation Title: Trustworthy Graph Neural Networks for Healthcare Predictive Modelling"
+    ]
+  },
+  {
+    "institution": "Islamic Azad University - Central Tehran Branch",
+    "timeline": "2016-2020",
+    "major": "Computer Engineering",
+    "degree": "M.Sc.",
+    "location": "Tehran, Iran",
+    "points": [
+      "Focused on Movie Recommendation Systems using Deep Learning",
+      "Thesis Title: A Social Hybrid Recommendation System using LSTM and CNN (<a class=\"link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://doi.org/10.1002/cpe.7015\" target=\"_blank\" rel=\"nofollow\">Published Paper</a>)"
+    ]
+  },
+  {
+    "institution": "Islamic Azad University - Central Tehran Branch",
+    "timeline": "2010-2016",
+    "major": "Computer Engineering",
+    "degree": "BS",
+    "location": "Tehran, Iran",
+    "points": [
+      "Project: Design and Development of an Online Learning System"
+    ]
+  }
+]

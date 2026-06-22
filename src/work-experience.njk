@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Work Experience
+pageDescription: Complete chronological database of peer-reviewed research papers, conference tracks, and books published by Hirad Daneshvar in AI and healthcare modeling.
+permalink: work-experience.html
+---
+<section class="container-fluid px-0" id="work-experience">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <h2 class="text-center"><i class="bi bi-briefcase-fill"></i> Work Experience</h2>
+            <div class="row row-cols-1 justify-content-start">
+                {% for exp in experience %}
+                    <div class="col">
+                        <div class="card px-0 border border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-7 text-start">
+                                        <h5 class="card-title">{{ exp.org }}</h5>
+                                    </div>
+                                    <div class="col-md-5 text-md-end">
+                                        <span class="fs-6 text-body-secondary"><i class="bi bi-calendar"></i> {{ exp.timeline }}
+                                        <br><i class="bi bi-geo-alt-fill"></i> {{ exp.location }}</span>
+                                    </div>
+                                </div>
+                                <h6 class="card-subtitle mb-2 mt-md-0 mt-sm-2 text-body-secondary">{{ exp.role }}</h6>
+                                <p class="card-text">
+                                    <ul>
+                                        {% for detail in exp.details %}
+                                            <li>{{ detail | safe }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

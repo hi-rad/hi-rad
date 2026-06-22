@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Teaching Experience
+pageDescription: Hirad Daneshvar's teaching experience.
+permalink: teaching-experience.html
+---
+<section class="container-fluid px-0" id="teaching-experience">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <h2 class="text-center"><i class="bi bi-building-fill"></i> Teaching Experience</h2>
+            <div class="row row-cols-1 justify-content-start">
+                {% for exp in teaching %}
+                    <div class="col">
+                        <div class="card px-0 border border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-7 text-start">
+                                        <h5 class="card-title">{{ exp.institution }}</h5>
+                                    </div>
+                                    <div class="col-md-5 text-md-end">
+                                        <span class="fs-6 text-body-secondary"><i class="bi bi-calendar"></i> {{ exp.timeline }}
+                                        <br><i class="bi bi-geo-alt-fill"></i> {{ exp.location }}</span>
+                                    </div>
+                                </div>
+                                <h6 class="card-subtitle mb-2 mt-md-0 mt-sm-2 text-body-secondary">{{ exp.role }}</h6>
+                                <p class="card-text">
+                                    <ul>
+                                        {% for course in exp.courses %}
+                                            <li>{{ course.title | safe }}</li>
+                                            <ul>
+                                                {% for detail in course.details %}
+                                                    <li>{{ detail | safe }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endfor %}
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

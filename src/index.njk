@@ -1,0 +1,108 @@
+---
+layout: base.njk
+pageKeywords: Hirad Daneshvar, Web Developer, Backend Developer, Software Engineer, Database Designer, Deep Learning, Medical AI, Recommendation System, Applied AI, Health AI, Trustworthy AI
+---
+<section class="container-fluid px-0" id="about-me">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <h1>{{ site.author }}</h1>
+            <div class="row justify-content-start">
+                <div class="col-12 d-md-none">
+                    <img src="{{ site.avatar }}" class="img-fluid" alt="{{ site.author }}">
+                </div>
+                <div class="col-12">
+                    <img src="{{ site.avatar }}"
+                    class="float-end me-3 mb-3 d-none d-md-block ms-2" width="30%" alt="{{ site.author }}">
+                    {{ site.bio | safe }}
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid px-0 bg-body-tertiary" id="education">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <h2 class="text-center"><i class="bi bi-mortarboard-fill"></i> Education</h2>
+            <div class="row row-cols-1 justify-content-start">
+                {% for item in education %}
+                    <div class="col">
+                        <div class="card px-0 border border-0 bg-body-tertiary">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-7 text-start">
+                                        <h5 class="card-title">{{ item.institution }}</h5>
+                                    </div>
+                                    <div class="col-md-5 text-md-end">
+                                        <span class="fs-6 text-body-secondary"><i class="bi bi-calendar"></i> {{ item.timeline }}
+                                        <br><i class="bi bi-geo-alt-fill"></i> {{ item.location }}</span>
+                                    </div>
+                                </div>
+                                <h6 class="card-subtitle mb-2 mt-md-0 mt-sm-2 text-body-secondary">{{ item.degree }} in {{ item.major }}</h6>
+                                <p class="card-text">
+                                    <ul>
+                                        {% for point in item.points %}
+                                            <li>{{ point | safe }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid px-0" id="publications">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <h2 class="text-center"><i class="bi bi-journals"></i> Selected Publications</h2>
+            <div class="row row-cols-1 justify-content-start">
+                {% for publication in publications %}
+                    <div class="col my-2">
+                        <div class="card">
+                            <div class="row align-items-stretch g-0">
+                                <div class="col-md-2 d-flex justify-content-center align-items-center bg-body-tertiary">
+                                    <p>{{ publication.year }}</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ publication.title }}</h5>
+                                        <p class="card-subtitle text-body-secondary">
+                                            {{ publication.authors | safe }} 
+                                        </p>
+                                        <p class="card-text text-body-secondary">{{ publication.venue }}</p>
+                                        <a href="{{ publication.link }}" title="View Paper" rel="nofollow" target="_blank" type="button" class="btn btn-outline-primary">View</a>
+                                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#{{ publication.citationId }}">Cite</button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="{{ publication.citationId }}" tabindex="-1" aria-labelledby="cite-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5">Cite</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+    <pre class="p-2 bg-body-tertiary rounded" id="{{ publication.citationId }}-content">{{ publication.bibtex | safe }}</pre>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success" onclick="copyToClipboard(this, '{{ publication.citationId }}-content')"><i class="bi bi-clipboard"></i> Copy</button>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="col text-center">
+                    <a class="btn btn-primary text-center" href="{{ site.links.googleScholar }}" rel="nofollow" target="_blank">View All Publications</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

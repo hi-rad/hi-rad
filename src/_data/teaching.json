@@ -1,0 +1,68 @@
+[
+  {
+    "institution": "Toronto Metropolitan University",
+    "timeline": "May 2024-July 2025",
+    "role": "Contract Instructor",
+    "location": "Toronto, ON, Canada",
+    "courses": [
+        {
+            "title": "Taught COE 318 Software Systems (<a class=\"link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/318/\" target=\"_blank\" rel=\"nofollow\">Course Page</a>)",
+            "details": [
+                "Taught basics of Object Oriented Programming (OOP)",
+                "Taught programming and testing using the Java programming language"
+            ]
+        },
+        {
+            "title": "Taught COE 692 Software Design and Architecture (<a class=\"link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://www.torontomu.ca/calendar/2024-2025/courses/computer-engineering/COE/692/\" target=\"_blank\" rel=\"nofollow\">Course Page</a>)",
+            "details": [
+                "Taught middlewares, patterns, and different software architecture strategies",
+                "Used the Java programming language to help students better understand the concepts"
+            ]
+        }
+    ]
+  },
+  {
+    "institution": "Carleton University",
+    "timeline": "September 2024-December 2024",
+    "role": "Contract Instructor",
+    "location": "Ottawa, ON, Canada",
+    "courses": [
+        {
+            "title": "Taught EGEN 5206 Web and Mobile Software Development",
+            "details": [
+                "Taught basics of HTML, CSS, and JavaScript",
+                "Taught different software architecture styles used in web development",
+                "Taught basics of MongoDB",
+                "Taught basics of React and NextJS",
+                "Taught basics of backend development using NestJS",
+                "Taught basics of ionic framework for cross-platform mobile application development"
+            ]
+        }
+    ]
+  },
+  {
+    "institution": "Toronto Metropolitan University",
+    "timeline": "September 2021-April 2024",
+    "role": "Teaching Assistant",
+    "location": "Toronto, ON, Canada",
+    "courses": [
+        {
+            "title": "Teaching Assistant for COE 318 Software Systems Lab",
+            "details": [
+                "Hosted a Midterm Tutorial Session for Students",
+                "Checked and Graded Assignments",
+                "Provided Students with Quizzes and Graded them",
+                "Helped Students with Understanding Concepts and Answered Their Questions"
+            ]
+        },
+        {
+            "title": "Teaching Assistant for COE 428 Algorithms and Data Structures Lab",
+            "details": [
+                "Checked and Graded Assignments",
+                "Provided Students with Quizzes and Graded them",
+                "Helped Students with Understanding Concepts and Answered Their Questions"
+            ]
+        }
+    ]
+  }
+]

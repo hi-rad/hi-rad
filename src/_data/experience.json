@@ -1,0 +1,70 @@
+[
+  {
+    "org": "INRS-UQO UMR Research Lab",
+    "role": "Postdoctoral Fellow",
+    "timeline": "September 2025-Present",
+    "location": "Gatineau, QC, Canada",
+    "details": [
+      "Member of the <a class=\"link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://musaelab.ca/\" rel=\"nofollow\" target=\"_blank\">Multisensory Signal Analysis and Enhancement (MuSAE) lab</a> at the INRS-UQO joint research unit.",
+      "Conducting research on uncertainty quantification, especially in LLMs and foundation models."
+    ]
+  },
+  {
+    "org": "Toronto Metropolitan University",
+    "role": "Research Assistant (Ph.D. Candidate)",
+    "timeline": "January 2021-September 2025",
+    "location": "Toronto, ON, Canada",
+    "details": [
+        "Conducted research on Applications of Deep Learning in Mental Health.",
+        "Conducted research on Graph Neural Networks and their applications, especially in the healthcare domain.",
+        "Conducted research on confidence calibration and uncertainty quantification of deep learning classifiers.",
+        "Conducted research on utilizing heterogeneous data from multiple sources.",
+        "Developed an AI solution in Python (PyTorch) for mental health service utilization.",
+        "Led a team of master's students for research on developing a trustworthy AI agent for mental health triaging."
+    ]
+  },
+  {
+    "org": "Payrad Smart Solutions",
+    "role": "Backend Developer",
+    "timeline": "July 2020-March 2021",
+    "location": "Tehran, Iran",
+    "details": [
+        "Developed databases using MySQL in a FinTech-related startup.",
+        "Developed and maintained web applications back-end using PHP/NodeJS and the Laravel/NestJS Framework to help speed up wage payments.",
+        "Developed a subsystem for a freight and logistics management system."
+    ]
+  },
+  {
+    "org": "Fanap Plus",
+    "role": "Full-Stack Developer & Team Lead",
+    "timeline": "September 2018-July 2020",
+    "location": "Tehran, Iran",
+    "details": [
+        "Developed databases using MySQL and MongoDB.",
+        "Developed and maintained web applications back-end using PHP and Laravel Framework.",
+        "Developed and maintained web applications related to soccer match prediction and mobile top-up purchases."
+    ]
+  },
+  {
+    "org": "Noghtechin Studio",
+    "role": "Web Developer (Freelance)",
+    "timeline": "April 2018-September 2020",
+    "location": "Tehran, Iran",
+    "details": [
+        "Analyzed, designed, developed and maintained web applications back-end Using PHP (Yii 2.x and Laravel Frameworks) and Python (Flask Framework for Rest APIs).",
+        "Developed Databases Using MySQL, MongoDB, and PostgreSQL.",
+        "Developed solutions for small startups in on-demand learning platforms, e-commerce systems, etc."
+    ]
+  },
+  {
+    "org": "Mandegar System",
+    "role": "Web Developer",
+    "timeline": "July 2013-April 2018",
+    "location": "Tehran, Iran",
+    "details": [
+        "Analyzed, designed, developed and maintained web applications back-end using PHP, Yii Framework.",
+        "Developed databases using MySQL and MongoDB.",
+        "Designed and developed an e-commerce system with features such as dynamic product fields."
+    ]
+  }
+]

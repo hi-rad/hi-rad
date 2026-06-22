@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary Meta Configurations -->
+    <title>{% if title %}{{ site.name }} | {{ title }}{% else %}{{ site.defaultTitle }}{% endif %}</title>
+    <link rel="icon" href="{{site.url}}{{ site.favicon }}" type="image/x-icon"/>
+    <meta name="author" content="{{site.author}}">
+    <meta name="description" content="{{ pageDescription or site.description }}">
+    {% if pageKeywords %}
+    <meta name="keywords" content="{{ pageKeywords }}">
+    {% endif %}
+    <meta href="{{ site.url }}{{ page.url }}" rel="canonical">
+    
+    <!-- OpenGraph Ecosystem (LinkedIn, Facebook, Discord) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{% if title %}{{ site.name }} | {{ title }}{% else %}{{ site.defaultTitle }}{% endif %}">
+    <meta property="og:description" content="{{ pageDescription or site.description }}">
+    <meta property="og:site_name" content="{{site.author}}">
+    <meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
+
+    
+    <!-- Twitter / X Meta Space -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.xHandle }}">
+    <meta name="twitter:title" content="{% if title %}{{ site.name }} | {{ title }}{% else %}{{ site.defaultTitle }}{% endif %}">
+    <meta name="twitter:description" content="{{ pageDescription or site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}">
+
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/academicons.min.css"/>
+    <style>
+        :target {
+            scroll-margin-top: 55px; /* Adjust this value to match the height of your navbar */
+        }
+        .ai::before, [class*=" ai-"]::before, [class^=ai-]::before
+        {
+            vertical-align: .125em;
+        }
+        .footer-i::before, [class*=" footer-i-"]::before, [class^=footer-i-]::before
+        {
+            vertical-align: .125em;
+        }
+        main > section:first-child {
+            padding: 50px 15px 0;
+        }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Header BEGIN -->
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary">
+            <div class="container">
+                <a class="navbar-brand" href="./">Hirad Daneshvar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./#about-me">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if "/teaching-experience.html" in page.url %} active {% endif %}" href="./teaching-experience.html">Teaching Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if "/work-experience.html" in page.url %} active {% endif %}" href="./work-experience.html">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{site.links.cv}}" rel="nofollow" target="_blank">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{site.links.blog}}" rel="nofollow" target="_blank">Blog</a>
+                    </li>
+                    </ul>
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item"><a title="LinkedIn" class="nav-link py-2 px-1 px-lg-2 d-flex text-body-secondary" href="{{site.links.linkedin}}" rel="nofollow" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                        <li class="nav-item"><a title="GitHub" class="nav-link py-2 px-1 px-lg-2 d-flex text-body-secondary" href="{{site.links.github}}" rel="nofollow" target="_blank"><i class="bi bi-github"></i></a></li>
+                        <li class="nav-item"><a title="Google Scholar" class="nav-link py-2 px-1 px-lg-2 d-flex text-body-secondary" href="{{site.links.googleScholar}}" rel="nofollow" target="_blank" style="font-size: 1.5rem;"><i class="ai ai-google-scholar"></i></a></li>
+                        <li class="nav-item">
+                            <button title="Change Theme (Light)" onclick="toggleTheme(this, 'light')" class="btn btn-link nav-link py-2 px-1 px-lg-2 d-flex d-none theme-toggler" id="toggle-light" type="button" aria-label="Toggle theme (light)"><i class="bi bi-brightness-high-fill"></i></button>
+                            <button title="Change Theme (Dark)" onclick="toggleTheme(this, 'dark')" class="btn btn-link nav-link py-2 px-1 px-lg-2 d-flex theme-toggler" id="toggle-dark" type="button" aria-label="Toggle theme (dark)"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header END -->
+
+    <main class="flex-shrink-0">
+        {{ content | safe }}
+    </main>
+
+    <!-- Footer BEGIN -->
+    <footer class="footer mt-auto bg-body-secondary">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center py-3">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-body-secondary">© {{ site.copyright }}</span>
+            </div>
+        
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a title="LinkedIn" class="text-body-secondary" href="{{site.links.linkedin}}" rel="nofollow" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                <li class="ms-3"><a title="GitHub" class="text-body-secondary" href="{{site.links.github}}" rel="nofollow" target="_blank"><i class="bi bi-github"></i></a></li>
+                <li class="ms-3"><a title="Personal Blog" class="text-body-secondary" href="{{site.links.blog}}" rel="nofollow" target="_blank"><i class="bi bi-substack"></i></a></li>
+                <li class="ms-3"><a title="Google Scholar" class="text-body-secondary" href="{{site.links.googleScholar}}" rel="nofollow" target="_blank" style="font-size: 1.5rem;"><i class="ai ai-google-scholar"></i></a></li>
+                <li class="ms-3"><a title="Other Links" class="text-body-secondary" href="{{site.links.other}}" rel="nofollow" target="_blank" style="font-size: 1.5rem;"><i class="footer-i bi bi-link-45deg"></i></a></li>
+                <li class="ms-3"><a title="X" class="text-body-secondary" href="https://x.com/{{site.xHandle}}" rel="nofollow" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+            </ul>
+        </div>
+      </footer>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleTheme(element, desiredTheme) {
+            element.classList.add('d-none');
+            if (desiredTheme=='dark'){
+                var elem2 = document.getElementById("toggle-light");
+                elem2.classList.remove('d-none');
+            } else {
+                var elem2 = document.getElementById("toggle-dark");
+                elem2.classList.remove('d-none');
+            }
+            var html = document.getElementsByTagName('html')[0];
+            html.setAttribute('data-bs-theme', desiredTheme);
+            localStorage.setItem("theme", desiredTheme);
+        }
+        if (localStorage.getItem("theme")){
+            const desiredTheme = localStorage.getItem("theme");
+            var html = document.getElementsByTagName('html')[0];
+            if (desiredTheme=='dark'){
+                document.getElementById("toggle-light").classList.remove('d-none');
+                document.getElementById("toggle-dark").classList.add('d-none');
+            } else {
+                document.getElementById("toggle-light").classList.add('d-none');
+                document.getElementById("toggle-dark").classList.remove('d-none');
+            }
+            html.setAttribute('data-bs-theme', desiredTheme);
+        }
+    </script>
+    {% if page.url == "/" %}
+        <script>
+            // Select all navigation links
+            let navLinks = document.querySelectorAll('#navbarSupportedContent .nav-item a');
+
+            // Function to update the 'active' class
+            function updateActiveClass() {
+                // Get the current full URL path including hash
+                let currentPath = window.location.pathname + window.location.hash;
+
+                // Loop through each link
+                navLinks.forEach(link => {
+                    // Remove 'active' class from all links
+                    link.classList.remove('active');
+
+                    if(!link.href.endsWith('blog.hdaneshvar.com/')){
+                        // Check if the link's href matches the current path for index.html path
+                        if ((currentPath.endsWith('index.html') || currentPath.endsWith('/') ) && link.href.endsWith('#about-me')){
+                            // Add the 'active' class to the matching link
+                            link.classList.add('active');
+                        } else {
+                            // Check if the link's href matches the current path
+                            if (link.href.endsWith(currentPath)) {
+                                // Add the 'active' class to the matching link
+                                link.classList.add('active');
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Add event listener for hash change
+            window.addEventListener('hashchange', updateActiveClass);
+
+            // Initial call to set the 'active' class on page load
+            updateActiveClass();
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section');
+
+                function onScroll() {
+                    let currentSection = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - document.querySelector('.navbar').offsetHeight;
+                        if (window.pageYOffset+(window.innerHeight/4) >= sectionTop) {
+                            currentSection = section.getAttribute('id');
+                        }
+                    });
+
+                    if (currentSection && window.location.hash !== `#${currentSection}`) {
+                        history.replaceState(null, null, `#${currentSection}`);
+                        updateActiveClass();
+                    }
+                }
+
+                window.addEventListener('scroll', onScroll);
+            });
+        </script>
+        <script>
+            function copyToClipboard(element, contentID) {
+                var copyText = document.getElementById(contentID).getHTML();
+                navigator.clipboard.writeText(copyText);
+                element.innerHTML = '<i class="bi bi-clipboard-check"></i> Copied!';
+                setTimeout(function(){ element.innerHTML = "<i class=\"bi bi-clipboard\"></i> Copy" }, 2000);
+            }
+        </script>
+    {% endif %}
+    <!-- Footer End -->
+  </body>
+</html>
